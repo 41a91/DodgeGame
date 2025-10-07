@@ -11,5 +11,15 @@
   "devDependencies": {
     "typescript": "~5.9.3",
     "vite": "^7.1.7"
+  },
+  "dependencies": {
+    "eslint": "^9.37.0",
+    "jest": "^30.2.0",
+    "package-patcher": "^0.0.2",
+    "phaser": "^3.90.0",
+    "prettier": "^3.6.2"
+  },
+  "overrides": {
+    "glob": "^11.0.3"
   }
 }
