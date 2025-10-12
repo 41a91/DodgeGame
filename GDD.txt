@@ -1,0 +1,37 @@
+Dodge Game
+
+Sci-Fi based game where the player is a husk of a human in a preservation tank (Think Matrix).
+The husk is connected to external, bio-mechanical creatures, that are used to explore the universe.
+
+
+- Credits used to upgrade bio-mechanical stats
+    - Credits will become the currency
+    - Each stat of a bio-mechanical ceature will cost different amounts of credits depending on the bio-mechanical creature
+
+- The player will choose which bio-mechanical creature they want to play as
+    - Each bio-mechanical creature will have a different ability
+    - Each bio-mechanical creature can use any type of equipment
+    - Each bio-mechanical creature will have different base stats
+        - Each stat will have a different max cap depending on the bio-mechanical creature
+    
+- There will be a main space station that will act as the hub for accessing all other parts of the game
+    - Storage
+    - External planet access
+    - ???
+
+- Bullet hell
+
+- Art Direction
+    - Pixel Based
+        - 16x16 tiles
+            - Scale each tile up to 64x64
+        - 16x16 sprites
+            - Scale each sprite up to 64x64
+    - Use Nearest Neighbor for scaling
+    - Orthographic projection
+        - Used to create the '3D effect' of the walls/objects
+        - Use matrix translation to create the effect
+        - https://www.reddit.com/r/RotMG/comments/8b2i3w/could_anyone_help_me_understand_how_rotmgs_fake/
+    - Enemies
+        - Billboard style
+        - The enemy is always facing the direction of the camera

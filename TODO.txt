@@ -1,0 +1,8 @@
+- Create a Map class
+    - Need to create an XML setup for determining map data 
+        - size, tiles, ect
+
+- How can I control the camera?
+- Get a player spawned in and moving
+- Design network packet setup
+- Design generic enemy setup
