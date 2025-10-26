@@ -30,7 +30,11 @@ class HubScene extends Phaser.Scene {
     const player1 = new Player(this, 50, 50, "blue");
 
     this.input.keyboard?.on("keydown", (event: KeyboardEvent) => {
-      player1.movement(event);
+      player1.movementStart(event);
+    });
+
+    this.input.keyboard?.on("keyup", (event: KeyboardEvent) => {
+      player1.movementEnd(event);
     });
   }
 
