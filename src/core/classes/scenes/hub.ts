@@ -1,30 +1,42 @@
 import "phaser";
-import config from '../../config';
+import config from "../../config";
+import Player from "../characters/player.js";
 
 class HubScene extends Phaser.Scene {
-    #pixelHeight: number;
-    #pixelWidth: number;
-    constructor(){
-        super({key: 'Hub'});
-        this.#pixelHeight = 64;
-        this.#pixelWidth = 64;
+  #pixelHeight: number;
+  #pixelWidth: number;
+  constructor() {
+    super({ key: "Hub" });
+    this.#pixelHeight = 64;
+    this.#pixelWidth = 64;
+  }
+
+  preload() {
+    this.load.image("hub1", "/hub/Hub-01-scaled.png");
+    this.load.image("blue", "/blue.png");
+  }
+
+  create() {
+    for (let i = 0; i < config.width / this.#pixelWidth; i++) {
+      for (let j = 0; j < config.height / this.#pixelHeight; j++) {
+        this.add.image(
+          this.#pixelWidth * i + this.#pixelWidth / 2,
+          this.#pixelHeight * j + this.#pixelHeight / 2,
+          "hub1",
+        );
+      }
     }
 
-    preload() {
-        this.load.image('hub1','/hub/Hub-01-scaled.png');
-    }
+    const player1 = new Player(this, 50, 50, "blue");
 
-    create() {
-        for(let i = 0; i < config.width/this.#pixelWidth; i++){
-            for(let j = 0; j < config.height/this.#pixelHeight; j++){
-                this.add.image(this.#pixelWidth * i + this.#pixelWidth/2, this.#pixelHeight * j + this.#pixelHeight/2, 'hub1');
-            }
-        }
-    }
+    this.input.keyboard?.on("keydown", (event: KeyboardEvent) => {
+      player1.movement(event);
+    });
+  }
 
-    update(time: number, delta: number) {
-        console.log(`Time: ${time}, delta: ${delta}`);
-    }
+  update(time: number, delta: number) {
+    console.log(`Time: ${time}, delta: ${delta}`);
+  }
 }
 
-export default HubScene
+export default HubScene;

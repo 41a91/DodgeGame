@@ -9,6 +9,6 @@ window.addEventListener("load", () => {
     height: config.height,
     type: config.type,
     physics: config.physics,
-    scene: [HubScene]
+    scene: [HubScene],
   });
 });
