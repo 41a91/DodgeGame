@@ -39,7 +39,7 @@ class HubScene extends Phaser.Scene {
   }
 
   update(time: number, delta: number) {
-    console.log(`Time: ${time}, delta: ${delta}`);
+    
   }
 }
 

@@ -6,3 +6,7 @@
 - Get a player spawned in and moving
 - Design network packet setup
 - Design generic enemy setup
+
+- Player Movement
+    - I'm going to have to rewrite how the player movement works in order to incorporate rotation mechanics
+    - The movement needs to update the velocity frame, maybe I can manipulate the position directly?
